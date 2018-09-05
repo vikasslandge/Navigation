@@ -1,5 +1,6 @@
 package com.example.vikaslandge.navigationmenutoobar
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -21,6 +22,10 @@ class nextActivity : AppCompatActivity() {
 
 
 
+    }
+    fun random(view: View){
+        var i = Intent(this,randomActivity::class.java)
+        startActivity(i)
     }
     fun toastMe(view: View) {
         // val myToast = Toast.makeText(this, message, duration);

@@ -19,7 +19,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".nextActivity" android:parentActivityName=".MainActivity" android:theme="@style/mystyle"></activity>
+        <activity
+            android:name=".nextActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/mystyle" />
+        <activity android:name=".randomActivity"></activity>
     </application>
 
 </manifest>
