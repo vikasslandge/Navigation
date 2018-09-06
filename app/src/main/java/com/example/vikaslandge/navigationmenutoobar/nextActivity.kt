@@ -25,6 +25,7 @@ class nextActivity : AppCompatActivity() {
     }
     fun random(view: View){
         var i = Intent(this,randomActivity::class.java)
+
         startActivity(i)
     }
     fun toastMe(view: View) {
