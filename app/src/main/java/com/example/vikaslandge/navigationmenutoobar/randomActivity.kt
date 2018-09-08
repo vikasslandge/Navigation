@@ -11,7 +11,10 @@ class randomActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_random)
         val r= Random()
-
-        textView3.text= r.nextInt(15).toString()
+        val count = intent.getIntExtra(TOTAL_COUNT, 0)
+        textView3.text= r.nextInt(count).toString()
+    }
+    companion object {
+        const val TOTAL_COUNT = "total_count"
     }
 }

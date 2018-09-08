@@ -12,7 +12,7 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_next.*
 
 class nextActivity : AppCompatActivity() {
-
+    var count1: Int? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_next)
@@ -23,9 +23,10 @@ class nextActivity : AppCompatActivity() {
 
 
     }
+
     fun random(view: View){
         var i = Intent(this,randomActivity::class.java)
-
+        i.putExtra(randomActivity.TOTAL_COUNT,count1)
         startActivity(i)
     }
     fun toastMe(view: View) {
@@ -43,9 +44,11 @@ class nextActivity : AppCompatActivity() {
         // Convert value to a number and increment it
         var count: Int = Integer.parseInt(countString)
         count++
-
+        count1 = count
         // Display the new value in the text view.
         showCountTextView.text = count.toString();
+
+
     }
     override fun onCreateOptionsMenu(menu :Menu): Boolean {
 
